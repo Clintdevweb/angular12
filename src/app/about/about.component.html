@@ -1,3 +1,13 @@
 <p>About component</p>
-<a [routerLink]="['test']" routerLinkActive="active">Test Component</a>
-<router-outlet></router-outlet>
+<ul [ngSwitch]="loginName">
+  <li *ngSwitchCase="'user'">
+      <p>login user</p>
+  </li>
+  <li *ngSwitchCase="'admin'">
+    <p>login admin</p>
+    <app-home></app-home>
+</li>
+<li *ngSwitchDefault="">
+    <p>Login stranger</p>
+</li>
+</ul>
