@@ -1,7 +1,7 @@
 <p appHighLight>Highlight me!</p>
 <!-- <p>{{color}}</p> -->
 <div [appHighLight]="color">
-    <p>Highlight me!</p>
+  <p>Highlight me!</p>
 </div>
 
 <ul [ngSwitch]="loginName">
@@ -16,3 +16,8 @@
     <p>Login stranger</p>
   </li>
 </ul>
+
+<p>Counter : {{ counter }}</p>
+
+<p [appHighLight]="color">CounterBinhPhuong : {{ counterSquare }}</p>
+
