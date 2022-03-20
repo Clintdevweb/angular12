@@ -1,8 +1,28 @@
-.home_work{
-    color: red;
+.home_work {
+  color: red;
 }
 
-.box{
-    padding: 5px;
-    box-shadow: 1px 2px 3px 1px #474242;
+.box {
+  padding: 5px;
+  box-shadow: 1px 2px 3px 1px #474242;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table,
+td,
+th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.salePrice{
+    color: red;
 }

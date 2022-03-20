@@ -1,16 +1,21 @@
 <div class="box">
-  <p class="home_work">home works!</p>
-  <p class="home_work">home works lan 2!</p>
-  <h2>Chao ban {{ age }}</h2>
-  <input type="text" [(ngModel)]="age" title="Day la age" />
+  <h3>Day la component Home</h3>
+  <h1>Trai cay</h1>
+  <!-- <ul *ngFor="let fruit of fruits">
+    <li>{{fruit}}</li>
+  </ul> -->
 
-  <!-- <h2 *ngIf="age > 18">Ban qua gia roi</h2>
-  <h2 *ngIf="age <= 18">Ban qua con tre lam</h2> -->
-  <button (click)="resetValue()">Reset Value</button>
-
-  <div *ngIf="age > 18 then gia; else tre"></div>
-
-  <ng-template #tre>Ban con tre lam</ng-template>
-  <ng-template #gia>Ban da gia roi</ng-template>
-
+  <table class="table">
+    <tr>
+      <th>Trai cay</th>
+      <th>Gia</th>
+      <th>Sale</th>
+    </tr>
+    <tr *ngFor="let fruit of fruits2; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ fruit.ten | uppercase }}</td>
+      <td [ngClass]="{ salePrice: fruit.sale }">{{ fruit.gia }}</td>
+      <td>{{ fruit.sale | onSale | uppercase }}</td>
+    </tr>
+  </table>
 </div>
