@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public name = 'huy'
+  public age = 15
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public resetValue(): void {
+    this.name = ''
+    this.age = 0
+
+  }
 }
