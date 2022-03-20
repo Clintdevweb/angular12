@@ -9,6 +9,10 @@ export class CommonService {
   constructor() {}
 
   public Squared(n: number): number {
-    return n * n
+    return n * n;
+  }
+
+  public submitData(data: any): void {
+    console.log('data up server', data)
   }
 }

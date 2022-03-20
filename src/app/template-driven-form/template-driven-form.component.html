@@ -1,0 +1,11 @@
+<h1>Template Form</h1>
+<form (ngSubmit)="handleSubmit()">
+  Name:
+  <input
+    [(ngModel)]="name"
+    [ngModelOptions]="{ standalone: true }"
+    type="text"
+  />
+  <button (click)="handleSubmit()"type="submit" style="margin-left: 5px;">Submit</button>
+</form>
+<p>{{ name }}</p>

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { TestRoutingComponent } from './test-routing/test-routing.component';
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   },
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
+  { path: 'reactiveform', component: ReactiveFormComponent },
+  { path: 'templateform', component: TemplateDrivenFormComponent },
   { path: 'test', component: TestRoutingComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
