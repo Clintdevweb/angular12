@@ -5,7 +5,7 @@
     <li>{{fruit}}</li>
   </ul> -->
 
-  <table class="table">
+  <!-- <table class="table">
     <tr>
       <th>Trai cay</th>
       <th>Gia</th>
@@ -17,5 +17,26 @@
       <td [ngClass]="{ salePrice: fruit.sale }">{{ fruit.gia }}</td>
       <td>{{ fruit.sale | onSale | uppercase }}</td>
     </tr>
-  </table>
+  </table> -->
+
+  <!-- comboBox -->
+  <div class="comboBox">
+    <span class="title">Tỉnh / Thành phố</span>
+    <div class="custom-select" style="width: 200px">
+      <select (change)="changeCity($event)">
+        <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+          {{ data.city }}
+        </option>
+      </select>
+    </div>
+    <br />
+    <span class="title">Quận / huyện</span>
+    <div class="custom-select" style="width: 200px">
+      <select>
+        <option *ngFor="let district of districts" value="{{ district }}">
+          {{ district }}
+        </option>
+      </select>
+    </div>
+  </div>
 </div>
