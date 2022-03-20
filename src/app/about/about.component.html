@@ -1,13 +1,18 @@
-<p>About component</p>
+<p appHighLight>Highlight me!</p>
+<!-- <p>{{color}}</p> -->
+<div [appHighLight]="color">
+    <p>Highlight me!</p>
+</div>
+
 <ul [ngSwitch]="loginName">
   <li *ngSwitchCase="'user'">
-      <p>login user</p>
+    <p>login user</p>
   </li>
   <li *ngSwitchCase="'admin'">
     <p>login admin</p>
     <app-home></app-home>
-</li>
-<li *ngSwitchDefault="">
+  </li>
+  <li *ngSwitchDefault="">
     <p>Login stranger</p>
-</li>
+  </li>
 </ul>
