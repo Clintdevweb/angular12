@@ -1,1 +1,44 @@
-<p>reactive-form works!</p>
+<h1>Reactive Form</h1>
+<form>
+  Name:
+  <input type="text" [formControl]="formData" />
+  <p>formData: {{ formData.value }}</p>
+  <button type="submit" style="margin-left: 5px">Submit</button>
+</form>
+
+<h1>Reactive Form2</h1>
+<form [formGroup]="profileForm" (submit)="handleSubmid()">
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name" />
+
+  <label for="age">Age: </label>
+  <input id="age" type="text" formControlName="age" />
+  <button type="submit">Submit</button>
+</form>
+
+<h1>Reactive Form3</h1>
+<form action="" [formGroup]="profileForm2" (ngSubmit)="handleSubmid()">
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name" />
+    <!-- <div *ngIf="!profileForm2.controls.name.valid" style="color: red;">Name is required</div> -->
+  <label for="age">Age: </label>
+  <input id="age" type="text" formControlName="age" />
+
+  <div formGroupName="address">
+    <h2>Address</h2>
+
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street" />
+
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city" />
+
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state" />
+
+    <label for="zip">Zip Code: </label>
+    <input id="zip" type="text" formControlName="zip" />
+  </div>
+  <button type="submit" [disabled] = "!profileForm2.valid">Submit</button>
+</form>
+<p></p>
